@@ -30,7 +30,7 @@
 <br />
 <div align="center">
   <a href="https://github.com/tonkatommy/MRHQ-L5-Mission-0">
-    <img src="images/logo.png" alt="Logo" width="80" height="80">
+    <img src="./frontend/public/images/logo.png" alt="Logo" width="80" height="80">
   </a>
 
 <h3 align="center">Mission 0</h3>
