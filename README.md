@@ -154,10 +154,10 @@ _For more examples, please refer to the [Documentation](https://example.com)_
 
 ## Roadmap
 
-- [ ] Feature 1
-- [ ] Feature 2
-- [ ] Feature 3
-  - [ ] Nested Feature
+- [x] Page 1 with mobile responsive layout.
+- [ ] Page 2
+- [ ] Page 3
+  - [ ] Contact Form
 
 See the [open issues](https://github.com/tonkatommy/MRHQ-L5-Mission-0/issues) for a full list of proposed features (and known issues).
 
@@ -198,7 +198,7 @@ Distributed under the GPL-3.0 license. See `LICENSE.txt` for more information.
 
 ## Contact
 
-Your Name - [@twitter_handle](https://twitter.com/twitter_handle) - email@email_client.com
+Tommy Goodman - [@tonkatommy](https://github.com/tonkatommy) - thomasgo@missionreadyhq.com
 
 Project Link: [https://github.com/tonkatommy/MRHQ-L5-Mission-0](https://github.com/tonkatommy/MRHQ-L5-Mission-0)
 
@@ -208,9 +208,7 @@ Project Link: [https://github.com/tonkatommy/MRHQ-L5-Mission-0](https://github.c
 
 ## Acknowledgments
 
-- []()
-- []()
-- []()
+- [Hazel, she's the goodest girl 🐕](https://scontent.fpmr1-1.fna.fbcdn.net/v/t39.30808-6/518380841_10165687428601754_4865577828235872821_n.jpg?_nc_cat=108&ccb=1-7&_nc_sid=a5f93a&_nc_ohc=Q4sc8rW8n7UQ7kNvwE3SsfS&_nc_oc=AdndYrVBQA5xoZMTiosZghg9MCU1ZnI11NcfFGRN7O7PN0sE6xWW5v6ikKa06_UQc5Q&_nc_zt=23&_nc_ht=scontent.fpmr1-1.fna&_nc_gid=u8E8ajfhU6qHDlRrQ0oLYg&oh=00_AfVbqSY9J7uwPyMgDjzxUpaTW3ZZQ49Fq4n8T3QbUkAoCA&oe=689941D6)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
