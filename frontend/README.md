@@ -23,7 +23,7 @@
 [![Forks][forks-shield]][forks-url]
 [![Stargazers][stars-shield]][stars-url]
 [![Issues][issues-shield]][issues-url]
-[![project_license][license-shield]][license-url]
+[![GNU General Public License v3.0][license-shield]][license-url]
 [![LinkedIn][linkedin-shield]][linkedin-url]
 
 <!-- PROJECT LOGO -->
@@ -89,14 +89,15 @@ Here's a blank template to get started. To avoid retyping too much info, do a se
 
 ### Built With
 
-- [![Next][Next.js]][Next-url]
+<!-- - [![Next][Next.js]][Next-url] -->
+
 - [![React][React.js]][React-url]
-- [![Vue][Vue.js]][Vue-url]
-- [![Angular][Angular.io]][Angular-url]
-- [![Svelte][Svelte.dev]][Svelte-url]
-- [![Laravel][Laravel.com]][Laravel-url]
-- [![Bootstrap][Bootstrap.com]][Bootstrap-url]
-- [![JQuery][JQuery.com]][JQuery-url]
+  <!-- - [![Vue][Vue.js]][Vue-url] -->
+  <!-- - [![Angular][Angular.io]][Angular-url] -->
+  <!-- - [![Svelte][Svelte.dev]][Svelte-url] -->
+  <!-- - [![Laravel][Laravel.com]][Laravel-url] -->
+  <!-- - [![Bootstrap][Bootstrap.com]][Bootstrap-url] -->
+  <!-- - [![JQuery][JQuery.com]][JQuery-url] -->
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -189,7 +190,7 @@ Don't forget to give the project a star! Thanks again!
 
 ## License
 
-Distributed under the project_license. See `LICENSE.txt` for more information.
+Distributed under the GPL-3.0 license. See `LICENSE.txt` for more information.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -225,7 +226,7 @@ Project Link: [https://github.com/tonkatommy/MRHQ-L5-Mission-0](https://github.c
 [issues-shield]: https://img.shields.io/github/issues/tonkatommy/MRHQ-L5-Mission-0.svg?style=for-the-badge
 [issues-url]: https://github.com/tonkatommy/MRHQ-L5-Mission-0/issues
 [license-shield]: https://img.shields.io/github/license/tonkatommy/MRHQ-L5-Mission-0.svg?style=for-the-badge
-[license-url]: https://github.com/tonkatommy/MRHQ-L5-Mission-0/blob/master/LICENSE.txt
+[license-url]: https://github.com/tonkatommy/MRHQ-L5-Mission-0/blob/main/LICENSE.txt
 [linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555
 [linkedin-url]: https://linkedin.com/in/tgnz
 [product-screenshot]: images/screenshot.png
