@@ -1,4 +1,4 @@
-import { Box, Container, Typography, Button, styled } from "@mui/material";
+import { Box, Container, Typography, Button, styled, TextField, Stack } from "@mui/material";
 import TrainIcon from "@mui/icons-material/Train";
 
 // Define a styled component for the Hero section for easy customization
@@ -28,6 +28,7 @@ const ContentContainer = styled(Container)({
   position: "relative",
   zIndex: 1,
   textAlign: "center",
+  // maxWidth: "80vw",
 });
 
 const Title = styled(Typography)(({ theme }) => ({
@@ -45,7 +46,7 @@ const Subtitle = styled(Typography)(({ theme }) => ({
 }));
 
 const CtaButton = styled(Button)(({ theme }) => ({
-  marginTop: theme.spacing(4),
+  // marginTop: theme.spacing(4),
   padding: theme.spacing(1.5, 4),
   fontSize: "1rem",
   fontWeight: "bold",
@@ -79,14 +80,33 @@ const AnimatedTrain = styled(TrainIcon)(({ theme }) => ({
 const Hero = () => {
   return (
     <HeroSection>
-      <ContentContainer>
+      <ContentContainer sx={{ textAlign: "left", maxWidth: "80vw" }}>
         <Title variant="h2" component="h1">
-          The Future of Transit is Here
+          Signal the future. <br />
+          Brand the underground.
         </Title>
-        <Subtitle variant="h5" component="p">
-          Experience the next generation of smart, efficient, and interconnected train systems.
+        <Subtitle sx={{ margin: "0" }} variant="h5" component="p">
+          NexRail Marketing is a covert branding agency embedded in the digital underworld of
+          tomorrow's cities.
         </Subtitle>
-        <CtaButton variant="contained">Explore the Tech</CtaButton>
+        <Stack
+          sx={{ marginTop: "100px", maxWidth: "800px", marginLeft: "auto", marginRight: "auto" }}
+          direction="row"
+          spacing={2}
+          justifyContent="center"
+        >
+          <TextField
+            sx={{
+              flexGrow: 1,
+              border: "1px solid #f9a825",
+              borderRadius: "4px",
+              backgroundColor: "#ffffff",
+            }}
+            id="outlined-search"
+            type="search"
+          />
+          <CtaButton variant="contained">Search the Tech</CtaButton>
+        </Stack>
       </ContentContainer>
       <AnimatedTrain />
     </HeroSection>
