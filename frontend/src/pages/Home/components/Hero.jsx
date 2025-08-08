@@ -7,7 +7,7 @@ const HeroSection = styled(Box)(({ theme }) => ({
   display: "flex",
   alignItems: "center",
   justifyContent: "center",
-  minHeight: "50vh",
+  minHeight: "500px",
   padding: theme.spacing(8, 2),
   backgroundColor: "#1a1a2e", // A deep, dark blue for a techy feel
   color: "#ffffff",
@@ -85,10 +85,10 @@ const Hero = () => {
           Signal the future. <br />
           Brand the underground.
         </Title>
-        <Subtitle sx={{ margin: "0" }} variant="h5" component="p">
+        {/* <Subtitle sx={{ margin: "0" }} variant="h5" component="p">
           NexRail Marketing is a covert branding agency embedded in the digital underworld of
           tomorrow's cities.
-        </Subtitle>
+        </Subtitle> */}
         <Stack
           sx={{ marginTop: "100px", maxWidth: "800px", marginLeft: "auto", marginRight: "auto" }}
           direction="row"
