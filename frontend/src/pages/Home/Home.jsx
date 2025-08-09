@@ -1,5 +1,6 @@
 // Import components and libraries
-import { Container, Stack } from "@mui/material";
+import Container from "@mui/material/Container";
+import Grid from "@mui/material/Grid";
 import ActionAreaCard from "../../sharedComponents/ActionAreaCard/ActionAreaCard";
 import ResponsiveAppBar from "../../sharedComponents/Navbar/ResponsiveAppBar";
 import Hero from "./components/Hero";
@@ -10,15 +11,25 @@ import { marketingCampaigns } from "../../assets/dummyData/marketingCampaigns.js
 const Home = () => {
   console.log(marketingCampaigns);
   return (
-    <div>
+    <div style={{ backgroundColor: "#121212", color: "#E0E0E0", height: "100vh" }}>
       <ResponsiveAppBar />
       <Hero />
-      <Container maxWidth="lg">
-        <Stack sx={{ margin: "3rem auto", justifyContent: "center" }} direction="row" spacing={2}>
-          {marketingCampaigns.map((campaign) => (
-            <ActionAreaCard key={campaign.id} campaign={campaign} />
-          ))}
-        </Stack>
+      <Container
+        sx={{
+          padding: "20px",
+          bgcolor: "background.default",
+          display: "flex",
+          justifyContent: "space-between",
+          gap: 3,
+          // alignItems: "center",
+          flexDirection: { xs: "column", sm: "row", md: "row" },
+          flexWrap: { xs: "nowrap", sm: "wrap", md: "wrap" },
+        }}
+      >
+        {marketingCampaigns.map((campaign) => (
+          <ActionAreaCard campaign={campaign} />
+          // {/*  */}
+        ))}
       </Container>
     </div>
   );

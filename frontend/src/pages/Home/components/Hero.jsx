@@ -1,6 +1,9 @@
 import { Box, Container, Typography, Button, styled, TextField, Stack } from "@mui/material";
 import TrainIcon from "@mui/icons-material/Train";
 
+// Import css module
+import styles from "./Hero.module.css";
+
 // Define a styled component for the Hero section for easy customization
 const HeroSection = styled(Box)(({ theme }) => ({
   position: "relative",
@@ -8,7 +11,10 @@ const HeroSection = styled(Box)(({ theme }) => ({
   alignItems: "center",
   justifyContent: "center",
   minHeight: "500px",
-  padding: theme.spacing(8, 2),
+  padding: theme.spacing(4, 2), // Smaller padding for mobile
+  [theme.breakpoints.up("md")]: {
+    padding: theme.spacing(8, 2), // Larger padding for bigger screens
+  },
   backgroundColor: "#1a1a2e", // A deep, dark blue for a techy feel
   color: "#ffffff",
   overflow: "hidden",
@@ -40,6 +46,15 @@ const Title = styled(Typography)(({ theme }) => ({
   marginBottom: theme.spacing(2),
   letterSpacing: "1.5px",
   textShadow: "2px 2px 8px rgba(0,0,0,0.6)",
+  [theme.breakpoints.down("sm")]: {
+    fontSize: "2rem",
+  },
+  [theme.breakpoints.up("sm")]: {
+    fontSize: "2.5rem",
+  },
+  [theme.breakpoints.up("md")]: {
+    fontSize: "3rem",
+  },
 }));
 
 const Subtitle = styled(Typography)(({ theme }) => ({
@@ -57,6 +72,10 @@ const CtaButton = styled(Button)(({ theme }) => ({
   color: "#ffffff",
   backgroundColor: "#f9a825", // Vibrant yellow for the call-to-action
   border: "2px solid #fbc02d",
+  width: "100%", // Full width on mobile
+  [theme.breakpoints.up("sm")]: {
+    width: "auto", // Auto on larger screens
+  },
   "&:hover": {
     backgroundColor: "#fdd835",
     transform: "scale(1.05)",
@@ -64,8 +83,12 @@ const CtaButton = styled(Button)(({ theme }) => ({
   },
 }));
 
+// Train Animation
 const AnimatedTrain = styled(TrainIcon)(({ theme }) => ({
   fontSize: "4rem",
+  [theme.breakpoints.down("sm")]: {
+    fontSize: "2.5rem", // Smaller on mobile
+  },
   color: "#f9a825",
   position: "absolute",
   bottom: "15px",
@@ -85,17 +108,20 @@ const Hero = () => {
   return (
     <HeroSection>
       <ContentContainer maxWidth="lg" sx={{ textAlign: "left" }}>
+        {/* Main Hero Title */}
         <Title variant="h2" component="h1">
           Code the noise. <br />
           <span style={{ color: "#f9a825" }}>Own the name.</span>
         </Title>
-        {/* <Subtitle sx={{ margin: "0" }} variant="h5" component="p">
-          NexRail Marketing is a covert branding agency embedded in the digital underworld of
-          tomorrow's cities.
-        </Subtitle> */}
+        {/* Search bar & Button */}
         <Stack
-          sx={{ marginTop: "100px", maxWidth: "800px", marginLeft: "auto", marginRight: "auto" }}
-          direction="row"
+          sx={{
+            marginTop: { xs: "50px", md: "100px" },
+            maxWidth: "800px",
+            marginLeft: "auto",
+            marginRight: "auto",
+          }}
+          direction={{ xs: "column", sm: "row" }}
           spacing={2}
           justifyContent="center"
         >
@@ -105,6 +131,7 @@ const Hero = () => {
               border: "1px solid #f9a825",
               borderRadius: "4px",
               backgroundColor: "#ffffff",
+              width: { xs: "100%", sm: "auto" }, // Full width on mobile
             }}
             id="outlined-search"
             type="search"
@@ -112,6 +139,7 @@ const Hero = () => {
           <CtaButton variant="contained">Scavenge</CtaButton>
         </Stack>
       </ContentContainer>
+
       <AnimatedTrain />
     </HeroSection>
   );

@@ -8,20 +8,20 @@ import CardActionArea from "@mui/material/CardActionArea";
 // It uses Material-UI components for styling and layout.
 const ActionAreaCard = ({ campaign: { image, title, description } }) => {
   return (
-    <Card sx={{ width: "100%", maxWidth: 345 }}>
+    <Card sx={{ maxWidth: { xs: "100%", sm: "47%", md: "31%", lg: "23%" } }}>
       <CardActionArea onClick={() => console.log("Card clicked!")}>
         <CardMedia
           component="img"
           height="140"
-          image={image ? image : "/static/images/cards/contemplative-reptile.jpg"}
-          alt={title ? title : "Card image"}
+          image={image || "/static/images/cards/contemplative-reptile.jpg"}
+          alt={title || "Card image"}
         />
         <CardContent>
           <Typography gutterBottom variant="h5" component="div">
-            {title ? title : "Default Title"}
+            {title || "Default Title"}
           </Typography>
           <Typography variant="body2" sx={{ color: "text.secondary" }}>
-            {description ? description : "Default Description"}
+            {description || "Default Description"}
           </Typography>
         </CardContent>
       </CardActionArea>
