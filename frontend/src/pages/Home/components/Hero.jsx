@@ -82,8 +82,11 @@ const Hero = () => {
     <HeroSection>
       <ContentContainer sx={{ textAlign: "left", maxWidth: "80vw" }}>
         <Title variant="h2" component="h1">
-          Signal the future. <br />
-          Brand the underground.
+          Code the noise.
+          <br />
+          <span style={{ color: "#f9a825" }}>Build the future.</span>
+          <br />
+          Own the name.
         </Title>
         {/* <Subtitle sx={{ margin: "0" }} variant="h5" component="p">
           NexRail Marketing is a covert branding agency embedded in the digital underworld of
