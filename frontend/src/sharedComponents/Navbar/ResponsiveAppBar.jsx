@@ -9,16 +9,14 @@ import MenuIcon from "@mui/icons-material/Menu";
 import Container from "@mui/material/Container";
 import Avatar from "@mui/material/Avatar";
 import Button from "@mui/material/Button";
-import Tooltip from "@mui/material/Tooltip";
 import MenuItem from "@mui/material/MenuItem";
-import AdbIcon from "@mui/icons-material/Adb";
 
-const pages = ["Products", "Pricing", "Blog"];
-const settings = ["Profile", "Account", "Dashboard", "Logout"];
+const pages = ["Campaigns", "Performance", "Contact Us"];
+// const settings = ["Profile", "Account", "Dashboard", "Logout"];
 
 function ResponsiveAppBar() {
   const [anchorElNav, setAnchorElNav] = useState(null);
-  const [anchorElUser, setAnchorElUser] = useState(null);
+  // const [anchorElUser, setAnchorElUser] = useState(null);
 
   const handleOpenNavMenu = (event) => {
     setAnchorElNav(event.currentTarget);
@@ -39,7 +37,7 @@ function ResponsiveAppBar() {
     <AppBar position="static">
       <Container maxWidth="xl">
         <Toolbar disableGutters>
-          <Avatar sx={{ mr: 1 }} alt="NexRail Marketing Logo" src="/images/logo.png" />
+          <Avatar sx={{ mr: 2 }} alt="NexRail Marketing Logo" src="/images/logo.png" />
           {/* <AdbIcon sx={{ display: { xs: "none", md: "flex" }, mr: 1 }} /> */}
           <Typography
             variant="h6"
@@ -50,7 +48,7 @@ function ResponsiveAppBar() {
               mr: 2,
               fontFamily: "monospace",
               fontWeight: 700,
-              letterSpacing: ".2rem",
+              letterSpacing: ".1rem",
               color: "inherit",
               textDecoration: "none",
             }}
@@ -59,7 +57,11 @@ function ResponsiveAppBar() {
           </Typography>
 
           <Box
-            sx={{ flexGrow: 1, display: { xs: "flex", md: "none" }, justifyContent: "flex-end" }}
+            sx={{
+              flexGrow: 1,
+              display: { xs: "flex", md: "none" },
+              justifyContent: "flex-end",
+            }}
           >
             <IconButton
               size="large"
@@ -103,11 +105,18 @@ function ResponsiveAppBar() {
               <Button
                 key={page}
                 onClick={handleCloseNavMenu}
-                sx={{ my: 2, color: "white", display: "block" }}
+                sx={{ ml: 2, color: "white", display: "block" }}
               >
                 {page}
               </Button>
             ))}
+            <Button
+              key={pages.length}
+              onClick={handleCloseNavMenu}
+              sx={{ ml: 2, color: "white", display: "block" }}
+            >
+              Login
+            </Button>
           </Box>
         </Toolbar>
       </Container>

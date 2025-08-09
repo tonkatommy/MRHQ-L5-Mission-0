@@ -19,8 +19,12 @@ const HeroSection = styled(Box)(({ theme }) => ({
     left: 0,
     width: "100%",
     height: "100%",
-    backgroundImage: "linear-gradient(45deg, #16222A 30%, #3A6073 90%)", // Gradient overlay
+    backgroundImage: "url('/images/hero.png') ", // Gradient overlay
+    backgroundSize: "cover", // Makes it fill the box
+    backgroundPosition: "center", // Centers the image
+    backgroundRepeat: "no-repeat", // Prevents tiling
     opacity: 0.5,
+    zIndex: 0, // Places it behind the content
   },
 }));
 
@@ -61,10 +65,10 @@ const CtaButton = styled(Button)(({ theme }) => ({
 }));
 
 const AnimatedTrain = styled(TrainIcon)(({ theme }) => ({
-  fontSize: "8rem",
+  fontSize: "4rem",
   color: "#f9a825",
   position: "absolute",
-  bottom: "10%",
+  bottom: "15px",
   left: "-100px",
   animation: "moveTrain 20s linear infinite",
   "@keyframes moveTrain": {
@@ -80,10 +84,10 @@ const AnimatedTrain = styled(TrainIcon)(({ theme }) => ({
 const Hero = () => {
   return (
     <HeroSection>
-      <ContentContainer sx={{ textAlign: "left", maxWidth: "80vw" }}>
+      <ContentContainer maxWidth="lg" sx={{ textAlign: "left" }}>
         <Title variant="h2" component="h1">
-          Signal the future. <br />
-          Brand the underground.
+          Code the noise. <br />
+          <span style={{ color: "#f9a825" }}>Own the name.</span>
         </Title>
         {/* <Subtitle sx={{ margin: "0" }} variant="h5" component="p">
           NexRail Marketing is a covert branding agency embedded in the digital underworld of
@@ -105,7 +109,7 @@ const Hero = () => {
             id="outlined-search"
             type="search"
           />
-          <CtaButton variant="contained">Search the Tech</CtaButton>
+          <CtaButton variant="contained">Scavenge</CtaButton>
         </Stack>
       </ContentContainer>
       <AnimatedTrain />
