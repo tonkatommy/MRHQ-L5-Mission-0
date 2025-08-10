@@ -92,8 +92,8 @@ const AnimatedTrain = styled(TrainIcon)(({ theme }) => ({
   color: "#f9a825",
   position: "absolute",
   bottom: "15px",
-  left: "-100px",
-  animation: "moveTrain 20s linear infinite",
+  left: "-50px",
+  animation: "moveTrain 10s linear infinite",
   "@keyframes moveTrain": {
     "0%": {
       transform: "translateX(0vw)",
@@ -133,6 +133,7 @@ const Hero = () => {
               borderRadius: "4px",
               backgroundColor: "#ffffff73",
               width: { xs: "100%", sm: "auto" }, // Full width on mobile
+              cursor: "url('/icons/cursor.png'), pointer",
             }}
             id={styles.searchInput}
             type="search"

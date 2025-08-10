@@ -11,7 +11,10 @@ import Avatar from "@mui/material/Avatar";
 import Button from "@mui/material/Button";
 import MenuItem from "@mui/material/MenuItem";
 
-const pages = ["Campaigns", "Performance", "Contact Us"];
+// Import css module
+import styles from "./ResponsiveAppBar.module.css";
+
+const pages = ["Campaigns", "Performance", "Contact"];
 // const settings = ["Profile", "Account", "Dashboard", "Logout"];
 
 function ResponsiveAppBar() {
@@ -37,8 +40,9 @@ function ResponsiveAppBar() {
     <AppBar position="static">
       <Container maxWidth="xl">
         <Toolbar disableGutters>
+          {/* Left side Logo */}
           <Avatar sx={{ mr: 2 }} alt="NexRail Marketing Logo" src="/images/logo.png" />
-          {/* <AdbIcon sx={{ display: { xs: "none", md: "flex" }, mr: 1 }} /> */}
+          {/* Company Name */}
           <Typography
             variant="h6"
             noWrap
@@ -78,12 +82,12 @@ function ResponsiveAppBar() {
               anchorEl={anchorElNav}
               anchorOrigin={{
                 vertical: "bottom",
-                horizontal: "left",
+                horizontal: "right",
               }}
               keepMounted
               transformOrigin={{
                 vertical: "top",
-                horizontal: "left",
+                horizontal: "right",
               }}
               open={Boolean(anchorElNav)}
               onClose={handleCloseNavMenu}
@@ -100,7 +104,7 @@ function ResponsiveAppBar() {
           <Box
             sx={{ flexGrow: 1, display: { xs: "none", md: "flex" }, justifyContent: "flex-end" }}
           >
-            {/* Desktop menu items */}
+            {/* Navbar links */}
             {pages.map((page) => (
               <Button
                 key={page}
@@ -110,7 +114,9 @@ function ResponsiveAppBar() {
                 {page}
               </Button>
             ))}
+            {/* Login button separate to style different */}
             <Button
+              id={styles.loginButton}
               key={pages.length}
               onClick={handleCloseNavMenu}
               sx={{ ml: 2, color: "white", display: "block" }}

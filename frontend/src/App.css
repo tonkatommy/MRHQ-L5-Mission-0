@@ -1,0 +1,11 @@
+body {
+  cursor: url("/icons/cursor.png"), auto;
+}
+
+button {
+  cursor: url("/icons/cursor.png"), auto;
+}
+
+input[type="search"] {
+  cursor: url("./assets/icons/pointer.png"), pointer;
+}
