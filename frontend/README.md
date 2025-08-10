@@ -81,7 +81,11 @@
 
 ## About The Project
 
-[![Product Name Screen Shot][product-screenshot]](https://example.com)
+<!-- <a href="https://github.com/tonkatommy/MRHQ-L5-Mission-0">
+  <img src="images/logo.png" alt="Logo" width="80" height="80">
+</a> -->
+
+[![Nexrail Marketing Screenshot][nexrail-screenshot]](images/logo.png)
 
 Here's a blank template to get started. To avoid retyping too much info, do a search and replace with your text editor for the following: `tonkatommy`, `MRHQ-L5-Mission-0`, `twitter_handle`, `tgnz`, `email_client`, `email`, `project_title`, `project_description`, `project_license`
 
