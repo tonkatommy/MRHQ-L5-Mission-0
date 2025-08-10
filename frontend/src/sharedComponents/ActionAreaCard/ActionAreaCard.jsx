@@ -16,18 +16,14 @@ const ActionAreaCard = ({ campaign: { image, title, description } }) => {
         <CardMedia
           component="img"
           height="140"
-          image={image || "/static/images/cards/contemplative-reptile.jpg"}
+          image={image || "/images/hero.png"}
           alt={title || "Card image"}
         />
         <CardContent>
-          <Typography className={styles.title} gutterBottom variant="h5" component="div">
+          <Typography id={styles.title} gutterBottom variant="h5" component="div">
             {title || "Default Title"}
           </Typography>
-          <Typography
-            className={styles.description}
-            variant="body2"
-            sx={{ color: "text.secondary" }}
-          >
+          <Typography id={styles.description} variant="body2" sx={{ color: "text.secondary" }}>
             {description || "Default Description"}
           </Typography>
         </CardContent>

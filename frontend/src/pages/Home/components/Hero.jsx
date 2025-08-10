@@ -41,6 +41,7 @@ const ContentContainer = styled(Container)({
   // maxWidth: "80vw",
 });
 
+// Main title text
 const Title = styled(Typography)(({ theme }) => ({
   fontWeight: "bold",
   marginBottom: theme.spacing(2),
@@ -57,6 +58,11 @@ const Title = styled(Typography)(({ theme }) => ({
   },
 }));
 
+// Highlighted text
+const Highlight = styled("span")(({ theme }) => ({
+  color: theme.palette.primary.main, // Vibrant blue for emphasis
+}));
+
 const Subtitle = styled(Typography)(({ theme }) => ({
   marginBottom: theme.spacing(4),
   maxWidth: "600px",
@@ -64,44 +70,108 @@ const Subtitle = styled(Typography)(({ theme }) => ({
   color: "#e0e0e0", // Lighter text for contrast
 }));
 
-const CtaButton = styled(Button)(({ theme }) => ({
+const SearchButton = styled(Button)(({ theme }) => ({
   // marginTop: theme.spacing(4),
   padding: theme.spacing(1.5, 4),
   fontSize: "1rem",
   fontWeight: "bold",
   color: "#ffffff",
-  backgroundColor: "#f9a825", // Vibrant yellow for the call-to-action
-  border: "2px solid #fbc02d",
+  backgroundColor: theme.palette.primary, // Vibrant blue for the call-to-action
+  border: "2px solid",
+  borderColor: theme.palette.primary.dark,
   width: "100%", // Full width on mobile
   [theme.breakpoints.up("sm")]: {
     width: "auto", // Auto on larger screens
   },
   "&:hover": {
-    backgroundColor: "#fdd835",
+    backgroundColor: theme.palette.primary.light,
     transform: "scale(1.05)",
     transition: "transform 0.2s ease-in-out",
   },
 }));
 
 // Train Animation
-const AnimatedTrain = styled(TrainIcon)(({ theme }) => ({
+// const AnimatedTrain = styled(TrainIcon)(({ theme }) => ({
+//   fontSize: "4rem",
+//   [theme.breakpoints.down("sm")]: {
+//     fontSize: "2.5rem", // Smaller on mobile
+//   },
+//   color: theme.palette.primary.main,
+//   position: "absolute",
+//   bottom: "15px",
+//   left: "-50px",
+//   animation: "moveTrain 10s linear infinite",
+//   "@keyframes moveTrain": {
+//     "0%": {
+//       transform: "translateX(0vw)",
+//     },
+//     "100%": {
+//       transform: "translateX(110vw)",
+//     },
+//   },
+// }));
+
+// This SVG filter definition only needs to be included ONCE in your app
+const NeonGlowDefs = () => (
+  <svg width="0" height="0" style={{ position: "absolute" }}>
+    <defs>
+      <filter id="tronTrainGlow" x="-50%" y="-50%" width="200%" height="200%">
+        {/* <!-- Bright blue core --> */}
+        <feDropShadow dx="0" dy="0" stdDeviation="2" floodColor="#00f0ff" floodOpacity="1" />
+        {/* <!-- Cyan halo --> */}
+        <feDropShadow dx="0" dy="0" stdDeviation="5" floodColor="#00d4ff" floodOpacity="0.8" />
+        {/* <!-- Purple outer glow --> */}
+        <feDropShadow dx="0" dy="0" stdDeviation="9" floodColor="#8a2be2" floodOpacity="0.6" />
+        {/* <!-- Magenta ambient glow --> */}
+        <feDropShadow dx="0" dy="0" stdDeviation="14" floodColor="#ff00ff" floodOpacity="0.3" />
+      </filter>
+    </defs>
+  </svg>
+);
+
+const GhostTrain = styled(TrainIcon, {
+  shouldForwardProp: (prop) => !["delay", "blur", "opacity"].includes(prop),
+})(({ delay, blur, opacity }) => ({
   fontSize: "4rem",
-  [theme.breakpoints.down("sm")]: {
-    fontSize: "2.5rem", // Smaller on mobile
-  },
-  color: "#f9a825",
   position: "absolute",
   bottom: "15px",
-  left: "-100px",
-  animation: "moveTrain 20s linear infinite",
+  left: "-50px",
+  animation: `moveTrain 10s linear infinite`,
+  animationDelay: delay,
+  opacity,
+  color: "#00f0ff",
+  filter: `url(#tronTrainGlow) ${blur ? `blur(${blur}px)` : ""}`,
+  transform: "translateZ(0)",
+
   "@keyframes moveTrain": {
-    "0%": {
-      transform: "translateX(0vw)",
-    },
-    "100%": {
-      transform: "translateX(110vw)",
-    },
+    "0%": { transform: "translateX(0vw)" },
+    "100%": { transform: "translateX(110vw)" },
   },
+}));
+
+const AnimatedTrain = () => {
+  return (
+    <>
+      <NeonGlowDefs />
+      {/* Main train */}
+      <GhostTrain delay="0s" blur={0} opacity={1} />
+      {/* Ghost trails */}
+      <GhostTrain delay="0.4s" blur={2} opacity={0.6} />
+      <GhostTrain delay="0.8s" blur={4} opacity={0.4} />
+      <GhostTrain delay="1.2s" blur={6} opacity={0.2} />
+    </>
+  );
+};
+
+// Search text field
+const SearchInput = styled(TextField)(({ theme }) => ({
+  flexGrow: 1,
+  border: "1px solid",
+  borderColor: theme.palette.primary.main,
+  borderRadius: "4px",
+  backgroundColor: "#ffffff73",
+  width: { xs: "100%", sm: "auto" }, // Full width on mobile
+  cursor: "url('/icons/cursor.png'), pointer",
 }));
 
 const Hero = () => {
@@ -112,7 +182,7 @@ const Hero = () => {
         {/* Main Hero Title */}
         <Title variant="h2" component="h1">
           Code the noise. <br />
-          <span style={{ color: "#f9a825" }}>Own the name.</span>
+          <Highlight>Own the name.</Highlight>
         </Title>
         {/* Search bar & Button */}
         <Stack
@@ -126,24 +196,16 @@ const Hero = () => {
           spacing={2}
           justifyContent="center"
         >
-          <TextField
-            sx={{
-              flexGrow: 1,
-              border: "1px solid #f9a825",
-              borderRadius: "4px",
-              backgroundColor: "#ffffff73",
-              width: { xs: "100%", sm: "auto" }, // Full width on mobile
-            }}
-            id={styles.searchInput}
-            type="search"
-          />
-          <CtaButton id={styles.searchButton} variant="contained">
+          {/* Custom search input */}
+          <SearchInput id={styles.searchInput} type="search" />
+          {/* Custom search button */}
+          <SearchButton id={styles.searchButton} variant="contained">
             Scavenge
-          </CtaButton>
+          </SearchButton>
         </Stack>
       </ContentContainer>
 
-      <AnimatedTrain />
+      <AnimatedTrain id={styles.trainIcon} />
     </HeroSection>
   );
 };

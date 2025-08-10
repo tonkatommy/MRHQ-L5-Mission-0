@@ -1,10 +1,6 @@
 #searchInput {
-  color: #000;
-  font-size: 1rem;
-}
-
-#searchButton {
-  font-size: 1rem;
+  color: #202020;
+  caret-color: #00ffff;
 }
 
 @media screen and (max-width: 600px) {
@@ -35,4 +31,12 @@
   #searchButton {
     font-size: 1.25rem;
   }
+}
+
+svg {
+  cursor: url("../../../assets/icons/pointer.png"), pointer;
+}
+
+svg:active {
+  cursor: url("../../../assets/icons/pointer-click.png"), pointer;
 }
