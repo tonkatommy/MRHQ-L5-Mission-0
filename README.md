@@ -83,7 +83,7 @@
 
 <!-- [![Product Name Screen Shot][product-screenshot]](https://example.com) -->
 
-[![Nexrail Marketing Screenshot][nexrail-screenshot]](images/logo.png)
+[![Nexrail Marketing Screenshot][nexrail-screenshot]](./frontend/public/images/screenshot.png)
 
 Here's a blank template to get started. To avoid retyping too much info, do a search and replace with your text editor for the following: `tonkatommy`, `MRHQ-L5-Mission-0`, `twitter_handle`, `tgnz`, `email_client`, `email`, `project_title`, `project_description`, `project_license`
 
