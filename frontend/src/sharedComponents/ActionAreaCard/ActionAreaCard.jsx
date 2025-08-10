@@ -16,7 +16,7 @@ const ActionAreaCard = ({ campaign: { image, title, description } }) => {
         <CardMedia
           component="img"
           height="140"
-          image={image || "/static/images/cards/contemplative-reptile.jpg"}
+          image={image || "/images/hero.png"}
           alt={title || "Card image"}
         />
         <CardContent>

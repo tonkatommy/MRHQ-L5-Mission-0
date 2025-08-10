@@ -32,3 +32,11 @@
     font-size: 1.25rem;
   }
 }
+
+svg {
+  cursor: url("../../../assets/icons/pointer.png"), pointer;
+}
+
+svg:active {
+  cursor: url("../../../assets/icons/pointer-click.png"), pointer;
+}

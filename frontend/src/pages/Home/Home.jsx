@@ -9,11 +9,12 @@ import styles from "./Home.module.css";
 
 // Import dummy json data
 import { marketingCampaigns } from "../../assets/dummyData/marketingCampaigns.json";
+import Footer from "../../sharedComponents/Footer/Footer";
 
 const Home = () => {
   // console.log(marketingCampaigns);
   return (
-    <div style={{ backgroundColor: "#121212", height: "100vh" }}>
+    <div style={{ backgroundColor: "#121212", height: "100%" }}>
       {/* Place the NavBar at the top */}
       <ResponsiveAppBar />
       {/* Place the Hero section below the NavBar */}
@@ -21,6 +22,7 @@ const Home = () => {
       {/* Place the marketing campaigns container below the Hero section */}
       <Container
         sx={{
+          marginTop: { xs: "80px", sm: "100px", md: "120px" },
           padding: "20px",
           bgcolor: "background.default",
           display: "flex",
@@ -35,6 +37,8 @@ const Home = () => {
           <ActionAreaCard key={campaign.id} campaign={campaign} />
         ))}
       </Container>
+      {/* Footer section */}
+      <Footer />
     </div>
   );
 };

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Custom Cursor Test</title>
+    <style>
+      /* Apply to the whole page first */
+      body {
+        cursor: url("pointer.png") 4 4, pointer;
+      }
+
+      /* Test on a search input */
+      input[type="search"] {
+        -webkit-appearance: none;
+        appearance: none;
+        cursor: url("pointer.png") 4 4, pointer;
+        padding: 10px;
+        font-size: 16px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Custom Cursor Test</h1>
+    <p>Hover anywhere on the page to see the custom cursor.</p>
+    <input type="search" placeholder="Search here..." />
+  </body>
+</html>
