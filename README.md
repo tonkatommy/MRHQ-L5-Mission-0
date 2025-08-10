@@ -83,9 +83,11 @@
 
 <!-- [![Product Name Screen Shot][product-screenshot]](https://example.com) -->
 
-[![Nexrail Marketing Screenshot][nexrail-screenshot]](./frontend/public/images/screenshot.png)
+![Nexrail Marketing Screenshot](./frontend/public/images/screenshot.png)
 
-Here's a blank template to get started. To avoid retyping too much info, do a search and replace with your text editor for the following: `tonkatommy`, `MRHQ-L5-Mission-0`, `twitter_handle`, `tgnz`, `email_client`, `email`, `project_title`, `project_description`, `project_license`
+This is the first Mission (Mission 0) for the Full stack developers Diploma advanced section.  
+The instructions I followed are:  
+Create the page according to the wireframe in the Project Brief. Remember to make it responsive on mobile screens.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -121,23 +123,22 @@ This is an example of how to list things you need to use the software and how to
 
 ### Installation
 
-1. Get a free API Key at [https://example.com](https://example.com)
-2. Clone the repo
+1. Clone the repo
    ```sh
    git clone https://github.com/tonkatommy/MRHQ-L5-Mission-0.git
    ```
-3. Install NPM packages
+2. Install NPM packages
    ```sh
    npm install
    ```
-4. Enter your API in `config.js`
-   ```js
-   const API_KEY = "ENTER YOUR API";
-   ```
-5. Change git remote url to avoid accidental pushes to base project
+3. Change git remote url to avoid accidental pushes to base project
    ```sh
    git remote set-url origin tonkatommy/MRHQ-L5-Mission-0
    git remote -v # confirm the changes
+   ```
+4. Run the app
+   ```sh
+   npm run dev
    ```
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
@@ -146,9 +147,7 @@ This is an example of how to list things you need to use the software and how to
 
 ## Usage
 
-Use this space to show useful examples of how a project can be used. Additional screenshots, code examples and demos work well in this space. You may also link to more resources.
-
-_For more examples, please refer to the [Documentation](https://example.com)_
+Just a basic responsive webpage.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -156,10 +155,10 @@ _For more examples, please refer to the [Documentation](https://example.com)_
 
 ## Roadmap
 
-- [x] Page 1 with mobile responsive layout.
-- [ ] Page 2
-- [ ] Page 3
-  - [ ] Contact Form
+- [x] Read Mission brief
+- [x] Design responsive webpage
+- [x] Complete Mission 0
+- [ ] Submit
 
 See the [open issues](https://github.com/tonkatommy/MRHQ-L5-Mission-0/issues) for a full list of proposed features (and known issues).
 
