@@ -1,0 +1,28 @@
+{
+  "marketingCampaigns": [
+    {
+      "id": 1,
+      "title": "Signal Surge: Infiltrate the Feed",
+      "description": "When the city sleeps, the signal spreads. NexRail Marketing hijacks the noise with precision branding for the untraceable, the unstoppable, and the unseen. From neon-laced visuals to encrypted campaigns, we don't advertise—we infiltrate.",
+      "image": "/images/signal-surge.png"
+    },
+    {
+      "id": 2,
+      "title": "Ghost Frequency",
+      "description": "Your brand isn't seen—it's felt. Ghost Frequency slips past firewalls and into neural feeds, broadcasting directly to the minds that matter. We craft messages so subliminal they haunt the skyline.",
+      "image": "/images/ghost-frequency.png"
+    },
+    {
+      "id": 3,
+      "title": "Neon Cipher",
+      "description": "In a city where every light tells a story, Neon Cipher makes sure yours is encrypted in brilliance. We design brands that hide messages in plain sight—visible to everyone, understood by only the right eyes.",
+      "image": "/images/neon-cipher.png"
+    },
+    {
+      "id": 4,
+      "title": "Blackout Broadcast",
+      "description": "When the lights go out, the real messages come alive. Blackout Broadcast turns power cuts into power plays—flooding the skyline with covert visuals only visible in the dark. We don't compete in the daylight; we own the blackout.",
+      "image": "/images/blackout-broadcast.png"
+    }
+  ]
+}

@@ -1,0 +1,38 @@
+#searchInput {
+  color: #000;
+  font-size: 1rem;
+}
+
+#searchButton {
+  font-size: 1rem;
+}
+
+@media screen and (max-width: 600px) {
+  #searchInput {
+    font-size: 0.8rem;
+  }
+
+  #searchButton {
+    font-size: 0.8rem;
+  }
+}
+
+@media screen and (min-width: 600px) {
+  #searchInput {
+    font-size: 1rem;
+  }
+
+  #searchButton {
+    font-size: 1rem;
+  }
+}
+
+@media screen and (min-width: 900px) {
+  #searchInput {
+    font-size: 1.25rem;
+  }
+
+  #searchButton {
+    font-size: 1.25rem;
+  }
+}
