@@ -4,6 +4,9 @@ import CardMedia from "@mui/material/CardMedia";
 import Typography from "@mui/material/Typography";
 import CardActionArea from "@mui/material/CardActionArea";
 
+// Import styles
+import styles from "./ActionAreaCard.module.css";
+
 // This component renders a card with an image, title, and description.
 // It uses Material-UI components for styling and layout.
 const ActionAreaCard = ({ campaign: { image, title, description } }) => {
@@ -17,10 +20,14 @@ const ActionAreaCard = ({ campaign: { image, title, description } }) => {
           alt={title || "Card image"}
         />
         <CardContent>
-          <Typography gutterBottom variant="h5" component="div">
+          <Typography className={styles.title} gutterBottom variant="h5" component="div">
             {title || "Default Title"}
           </Typography>
-          <Typography variant="body2" sx={{ color: "text.secondary" }}>
+          <Typography
+            className={styles.description}
+            variant="body2"
+            sx={{ color: "text.secondary" }}
+          >
             {description || "Default Description"}
           </Typography>
         </CardContent>

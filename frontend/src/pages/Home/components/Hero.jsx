@@ -105,6 +105,7 @@ const AnimatedTrain = styled(TrainIcon)(({ theme }) => ({
 }));
 
 const Hero = () => {
+  // console.log(styles);
   return (
     <HeroSection>
       <ContentContainer maxWidth="lg" sx={{ textAlign: "left" }}>
@@ -116,7 +117,7 @@ const Hero = () => {
         {/* Search bar & Button */}
         <Stack
           sx={{
-            marginTop: { xs: "50px", md: "100px" },
+            marginTop: "100px",
             maxWidth: "800px",
             marginLeft: "auto",
             marginRight: "auto",
@@ -130,13 +131,15 @@ const Hero = () => {
               flexGrow: 1,
               border: "1px solid #f9a825",
               borderRadius: "4px",
-              backgroundColor: "#ffffff",
+              backgroundColor: "#ffffff73",
               width: { xs: "100%", sm: "auto" }, // Full width on mobile
             }}
-            id="outlined-search"
+            id={styles.searchInput}
             type="search"
           />
-          <CtaButton variant="contained">Scavenge</CtaButton>
+          <CtaButton id={styles.searchButton} variant="contained">
+            Scavenge
+          </CtaButton>
         </Stack>
       </ContentContainer>
 

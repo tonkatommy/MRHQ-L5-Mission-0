@@ -1,6 +1,5 @@
 // Import components and libraries
 import Container from "@mui/material/Container";
-import Grid from "@mui/material/Grid";
 import ActionAreaCard from "../../sharedComponents/ActionAreaCard/ActionAreaCard";
 import ResponsiveAppBar from "../../sharedComponents/Navbar/ResponsiveAppBar";
 import Hero from "./components/Hero";
@@ -9,9 +8,9 @@ import Hero from "./components/Hero";
 import { marketingCampaigns } from "../../assets/dummyData/marketingCampaigns.json";
 
 const Home = () => {
-  console.log(marketingCampaigns);
+  // console.log(marketingCampaigns);
   return (
-    <div style={{ backgroundColor: "#121212", color: "#E0E0E0", height: "100vh" }}>
+    <div style={{ backgroundColor: "#121212", height: "100vh" }}>
       <ResponsiveAppBar />
       <Hero />
       <Container
@@ -27,8 +26,7 @@ const Home = () => {
         }}
       >
         {marketingCampaigns.map((campaign) => (
-          <ActionAreaCard campaign={campaign} />
-          // {/*  */}
+          <ActionAreaCard key={campaign.id} campaign={campaign} />
         ))}
       </Container>
     </div>
