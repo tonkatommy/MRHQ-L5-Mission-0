@@ -86,8 +86,13 @@
 ![Nexrail Marketing Screenshot](./frontend/public/images/screenshot.png)
 
 This is the first Mission (Mission 0) for the Full stack developers Diploma advanced section.  
-The instructions I followed are:  
-Create the page according to the wireframe in the Project Brief. Remember to make it responsive on mobile screens.
+The instructions I followed are:
+
+**"Create the page according to the wireframe in the Project Brief. Remember to make it responsive on mobile screens."**
+
+I have produced a webpage using Node and React. I've used my own images and colour theme. Using the project brief wireframe I have come up with this solution. Making the site responsive is a requirement and I have achieved full responsivness using media queries and MUI `sx={}` property.
+
+Enjoyment from building this project is something I greatly appreciate. It was fun to use MUI components for almost everything I could. Styling MUI components can be somewhat daunting but I perservered and successfully completed a working version.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -112,15 +117,6 @@ Create the page according to the wireframe in the Project Brief. Remember to mak
 This is an example of how you may give instructions on setting up your project locally.
 To get a local copy up and running follow these simple example steps.
 
-### Prerequisites
-
-This is an example of how to list things you need to use the software and how to install them.
-
-- npm
-  ```sh
-  npm install npm@latest -g
-  ```
-
 ### Installation
 
 1. Clone the repo
@@ -129,11 +125,11 @@ This is an example of how to list things you need to use the software and how to
    ```
 2. Install NPM packages
    ```sh
-   npm install
+   npm i
    ```
 3. Change git remote url to avoid accidental pushes to base project
    ```sh
-   git remote set-url origin tonkatommy/MRHQ-L5-Mission-0
+   git remote set-url origin [link/to/your/repo.git]
    git remote -v # confirm the changes
    ```
 4. Run the app
@@ -147,20 +143,11 @@ This is an example of how to list things you need to use the software and how to
 
 ## Usage
 
-Just a basic responsive webpage.
+Here we have our site working at different screen sizes:
 
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
+![Nexrail Marketing Screenshot](./frontend/public/images/responsive-screenshot.png)
 
-<!-- ROADMAP -->
-
-## Roadmap
-
-- [x] Read Mission brief
-- [x] Design responsive webpage
-- [x] Complete Mission 0
-- [ ] Submit
-
-See the [open issues](https://github.com/tonkatommy/MRHQ-L5-Mission-0/issues) for a full list of proposed features (and known issues).
+As you can see the site responds nicely to the different screen sizes. I had alot of enjoyment figuring out how achieve the responsivness. Learning there are different ways to achieve the same effect was exciting.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -171,12 +158,12 @@ See the [open issues](https://github.com/tonkatommy/MRHQ-L5-Mission-0/issues) fo
 Contributions are what make the open source community such an amazing place to learn, inspire, and create. Any contributions you make are **greatly appreciated**.
 
 If you have a suggestion that would make this better, please fork the repo and create a pull request. You can also simply open an issue with the tag "enhancement".
-Don't forget to give the project a star! Thanks again!
+Don't forget to give the project a star!⭐ Thanks again!
 
 1. Fork the Project
-2. Create your Feature Branch (`git checkout -b feature/AmazingFeature`)
-3. Commit your Changes (`git commit -m 'Add some AmazingFeature'`)
-4. Push to the Branch (`git push origin feature/AmazingFeature`)
+2. Create your Feature Branch (`git checkout -b feature/RadicalFeature`)
+3. Commit your Changes (`git commit -m 'Add some Radical Feature I just thought of.'`)
+4. Push to the Branch (`git push origin feature/RadicalFeature`)
 5. Open a Pull Request
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
@@ -191,7 +178,7 @@ Don't forget to give the project a star! Thanks again!
 
 ## License
 
-Distributed under the GPL-3.0 license. See `LICENSE.txt` for more information.
+Distributed under the GPL-3.0 license. See [LICENSE.txt](https://github.com/tonkatommy/MRHQ-L5-Mission-0/blob/main/LICENSE.txt) for more information.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
